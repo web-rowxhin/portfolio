@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Roland | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="blue-mode">
+
+    <!-- Background Music Audio Element (Name your file: bg-music.mp3) -->
+    <audio id="bgAudio" loop preload="auto">
+        <source src="bg-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Magnifying Glass Zoom Ring Element -->
+    <div class="zoom-lens-ring" id="zoomLensRing"></div>
+
+    <!-- Clean Aesthetic Intro Screen with Sharp Video Background -->
+    <div id="introScreen" class="intro-overlay">
+        <div class="intro-video-bg">
+            <video autoplay loop muted playsinline>
+                <source src="gb.mp4" type="video/mp4">
+            </video>
+            <div class="intro-video-overlay"></div>
+        </div>
+        <div class="intro-card">
+            <div class="intro-glow"></div>
+            <p class="intro-subtitle">WELCOME TO MY DIGITAL SPACE</p>
+            <h1 class="intro-title">ROLAND<span>.</span></h1>
+            <p class="intro-desc">Cybersecurity & Tech Portfolio</p>
+            <button id="enterBtn" class="enter-btn">
+                <span>Enter Portfolio</span>
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Heavenly Gate Opening Transition Overlay -->
+    <div class="heaven-gate" id="heavenGate">
+        <div class="gate-door gate-left"></div>
+        <div class="gate-door gate-right"></div>
+        <div class="heaven-light"></div>
+    </div>
+
+    <!-- Success Message Popup Modal ("WAIT FOR MY RESPOND") -->
+    <div id="successModal" class="success-modal">
+        <div class="success-card">
+            <i class="fa-solid fa-circle-check success-icon"></i>
+            <h3>Message Sent Successfully!</h3>
+            <p>WAIT FOR MY RESPOND</p>
+            <button id="closeModalBtn" class="btn">Got it</button>
+        </div>
+    </div>
+
+    <!-- Fullscreen Sharp Background Video using gb.mp4 -->
+    <div class="theme-bg-video-container">
+        <video class="theme-bg-video" autoplay loop muted playsinline>
+            <source src="gb.mp4" type="video/mp4">
+        </video>
+        <div class="theme-video-overlay"></div>
+    </div>
+
+    <!-- Animated Background Overlay Blobs -->
+    <div class="bg-blobs">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="blob blob-3"></span>
+    </div>
+
+    <!-- Theme Transition Overlay Effect -->
+    <div class="theme-ripple" id="themeRipple"></div>
+
+    <header class="header">
+        <div class="header-left">
+            <a href="#home" class="logo hover-words">Rol<span>and.</span></a>
+            <div class="header-tagline hover-words">Turn Ideas Into Reality</div>
+        </div>
+        
+        <!-- Centered Top Navigation Bar -->
+        <nav class="navbar" id="navbar">
+            <a href="#home" class="active nav-gate-trigger">Home</a>
+            <a href="#services" class="nav-gate-trigger">Services</a>
+            <a href="#skills" class="nav-gate-trigger">Skills</a>
+            <a href="#education" class="nav-gate-trigger">Education</a>
+            <a href="#experience" class="nav-gate-trigger">Experience</a>
+            <a href="#contact" class="nav-gate-trigger">Contact</a>
+        </nav>
+
+        <!-- Header Right Actions: Music Toggle & Mobile Menu -->
+        <div class="header-right-actions">
+            <!-- Music Control Button -->
+            <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Toggle background music" title="Play / Pause Music">
+                <i class="fa-solid fa-music" id="musicIcon"></i>
+                <span class="music-waves" id="musicWaves">
+                    <span></span><span></span><span></span>
+                </span>
+            </button>
+
+            <div class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overlay Backdrop for Mobile Menu -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- ========== HOME SECTION ========== -->
+    <section class="home" id="home">
+        <div class="home-container">
+            <div class="home-content">
+                <h3 class="fade-in hover-words">Hello, I'm</h3>
+                <h1 class="fade-in delay-1 hover-words">I'm <span>Roland</span></h1>
+                <h3 class="fade-in delay-2">And I'm a <span class="typing-text"></span></h3>
+                <p class="fade-in delay-3 hover-words">
+                    Passionate about cybersecurity, ethical hacking, networking, and building clean,
+                    secure digital experiences. I love learning new tech and turning
+                    ideas into real, working projects.
+                </p>
+
+                <!-- Social Icons Including TikTok -->
+                <div class="social-icons fade-in delay-4">
+                    <a href="https://www.linkedin.com/in/roland-jonn-amangao-6a7900445/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/rolandjonnamangao-dev" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/raexhinxx" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/rowxhin" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@xyro.w?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+
+                <div class="btn-group fade-in delay-5">
+                    <a href="#contact" class="btn nav-gate-trigger">Hire Me</a>
+                </div>
+            </div>
+
+            <!-- Profile Media Container with Theme Switcher placed directly on top -->
+            <div class="home-img">
+                <div class="profile-column-wrapper">
+                    <div class="theme-switchers-profiletop">
+                        <button class="theme-btn red-btn" onclick="switchThemeWithAnimation('red-mode', event)" title="Red Mode" aria-label="Red Theme"></button>
+                        <button class="theme-btn blue-btn" onclick="switchThemeWithAnimation('blue-mode', event)" title="Blue Mode" aria-label="Blue Theme"></button>
+                        <button class="theme-btn green-btn" onclick="switchThemeWithAnimation('green-mode', event)" title="Green Mode" aria-label="Green Theme"></button>
+                        <button class="theme-btn black-btn" onclick="switchThemeWithAnimation('black-mode', event)" title="Black Mode" aria-label="Black Theme"></button>
+                        <button class="theme-btn white-btn" onclick="switchThemeWithAnimation('light-mode', event)" title="White Mode" aria-label="White Theme"></button>
+                    </div>
+
+                    <div class="portrait-container" id="portraitContainer">
+                        <div class="img-wrapper">
+                            <img src="main.jpg" alt="Roland Jonn Rios Amangao" class="portrait-media real-photo active" id="realPhoto">
+                            <video autoplay loop muted playsinline class="portrait-media art-video" id="artVideo">
+                                <source src="anime-video.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <section class="section services-section scroll-reveal" id="services">
+        <h2 class="heading hover-words">My <span>Services</span></h2>
+        <div class="services-container">
+            <div class="service-card scroll-reveal-item">
+                <i class="fa-solid fa-shield-halved card-icon"></i>
+                <h3 class="hover-words">Cybersecurity</h3>
+                <p class="hover-words">Analyzing vulnerabilities, implementing security measures, and safeguarding digital infrastructure against web and network threats.</p>
+            </div>
+            <div class="service-card scroll-reveal-item">
+                <i class="fa-solid fa-user-secret card-icon"></i>
+                <h3 class="hover-words">Ethical Hacking</h3>
+                <p class="hover-words">Performing penetration testing, threat simulation, and proactive security evaluations to strengthen system defenses.</p>
+            </div>
+            <div class="service-card scroll-reveal-item">
+                <i class="fa-solid fa-code card-icon"></i>
+                <h3 class="hover-words">Web Development</h3>
+                <p class="hover-words">Building responsive, fast, and modern web applications with clean code and interactive user interfaces.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SKILLS SECTION (VIDEO EXACT 3D FLOATING KEYBOARD) ========== -->
+    <section class="section skills-section scroll-reveal" id="skills">
+        <div class="skills-layout-wrapper">
+            <!-- Left Info Panel with detailed technical understanding -->
+            <div class="skill-info-side">
+                <h1 class="skill-heading-main hover-words">SKILLS</h1>
+                <p class="skill-hint-sub hover-words">(click keycap to inspect stack)</p>
+                
+                <div class="skill-active-display" id="skillActiveDisplay">
+                    <h2 class="active-skill-title" id="activeSkillTitle">Linux Administration</h2>
+                    <p class="active-skill-desc" id="activeSkillDesc">Operating core command-line environments, configuring file permission security models (chmod), and hardening OS infrastructure.</p>
+                    <div class="active-skill-badges" id="activeSkillBadges">
+                        <span class="badge">Kali Linux</span>
+                        <span class="badge">Bash Scripting</span>
+                        <span class="badge">Ubuntu Server</span>
+                        <span class="badge">SSH Tunneling</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right 3D Isometric Mechanical Keyboard with Mascot -->
+            <div class="keyboard-3d-stage">
+                <!-- Floating Bongo Cat Mascot -->
+                <div class="bongo-cat-mascot">
+                    <svg viewBox="0 0 100 60" class="cat-svg">
+                        <path d="M 20 40 Q 20 20 50 20 Q 80 20 80 40 Z" fill="#ffffff"/>
+                        <polygon points="25,22 35,8 42,21" fill="#ffffff"/>
+                        <polygon points="75,22 65,8 58,21" fill="#ffffff"/>
+                        <circle cx="38" cy="30" r="3" fill="#111111"/>
+                        <circle cx="62" cy="30" r="3" fill="#111111"/>
+                        <path d="M 46 36 Q 50 40 54 36" fill="none" stroke="#111111" stroke-width="2"/>
+                        <ellipse cx="28" cy="35" rx="4" ry="2" fill="#ffb6c1"/>
+                        <ellipse cx="72" cy="35" rx="4" ry="2" fill="#ffb6c1"/>
+                    </svg>
+                </div>
+
+                <!-- 3D Keyboard Base Block -->
+                <div class="keyboard-body-3d">
+                    <div class="key-grid-3d">
+                        <div class="keycap-3d green" data-skill="linux" data-title="Linux Administration" data-desc="Operating core command-line environments, configuring file permission security models (chmod), and hardening OS infrastructure." data-tools="Kali Linux,Bash Scripting,Ubuntu Server,SSH Tunneling">
+                            <div class="key-top"><i class="fa-solid fa-terminal"></i></div>
+                        </div>
+                        <div class="keycap-3d cyan" data-skill="hacking" data-title="Ethical Hacking & Pentesting" data-desc="Simulating penetration testing attacks, discovering system vulnerabilities, and executing network reconnaissance." data-tools="Nmap,Metasploit,Wireshark,Burp Suite">
+                            <div class="key-top"><i class="fa-solid fa-user-secret"></i></div>
+                        </div>
+                        <div class="keycap-3d orange" data-skill="html" data-title="HTML5 Web Structure" data-desc="Writing semantic, accessible web markup and clean document object models for modern digital applications." data-tools="Semantic HTML5,DOM Architecture,Accessibility">
+                            <div class="key-top"><i class="fa-brands fa-html5"></i></div>
+                        </div>
+                        <div class="keycap-3d red" data-skill="css" data-title="CSS3 Styling & Layouts" data-desc="Designing responsive multi-device layouts utilizing advanced Flexbox, CSS Grid, and fluid animations." data-tools="Flexbox,CSS Grid,Responsive Design,Animations">
+                            <div class="key-top"><i class="fa-brands fa-css3-alt"></i></div>
+                        </div>
+                        <div class="keycap-3d yellow" data-skill="js" data-title="JavaScript Interactivity" data-desc="Programming dynamic browser behaviors, asynchronous event handling, and interactive DOM manipulation." data-tools="ES6+,Async/Await,DOM Manipulation,Fetch API">
+                            <div class="key-top"><i class="fa-brands fa-js"></i></div>
+                        </div>
+                        <div class="keycap-3d purple" data-skill="python" data-title="Python Automation" data-desc="Developing custom scripts for data processing, socket programming, network automation, and backend logic." data-tools="Python 3,Automation Scripts,Socket Programming,Requests">
+                            <div class="key-top"><i class="fa-brands fa-python"></i></div>
+                        </div>
+                        <div class="keycap-3d blue" data-skill="java" data-title="Java Development" data-desc="Building object-oriented software architectures, handling bitwise operations, and managing robust data structures." data-tools="Java SE,OOP Principles,Data Structures,Algorithm Design">
+                            <div class="key-top"><i class="fa-brands fa-java"></i></div>
+                        </div>
+                        <div class="keycap-3d pink" data-skill="network" data-title="Network Administration" data-desc="Configuring routers, subnetting IP addresses, analyzing TCP/IP headers, and designing secure local topologies." data-tools="Cisco Packet Tracer,Subnetting,TCP/IP Protocols,Wireshark">
+                            <div class="key-top"><i class="fa-solid fa-server"></i></div>
+                        </div>
+                        <div class="keycap-3d teal" data-skill="git" data-title="Version Control & Git" data-desc="Tracking codebase history, collaborating via remote repositories, and managing feature branch deployments." data-tools="Git CLI,GitHub Repositories,Branch Merging,Collaboration">
+                            <div class="key-top"><i class="fa-brands fa-github"></i></div>
+                        </div>
+                        <div class="keycap-3d dark" data-skill="ai" data-title="AI-Assisted Engineering" data-desc="Integrating generative AI assistants and automated coding workflows into VS Code for accelerated development." data-tools="Gemini API,VS Code AI,Prompt Engineering,Workflow Automation">
+                            <div class="key-top"><i class="fa-solid fa-brain"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EDUCATION SECTION ========== -->
+    <section class="section education-section scroll-reveal" id="education">
+        <h2 class="heading hover-words">My <span>Education</span></h2>
+        <div class="timeline">
+            <div class="timeline-card scroll-reveal-item">
+                <span class="timeline-date">2026 - Present</span>
+                <h3 class="hover-words">Bachelor of Science in Information Technology</h3>
+                <h4 class="hover-words">University of the Cordilleras</h4>
+                <p class="hover-words">Focusing on network administration, ethical hacking fundamentals, and software development.</p>
+            </div>
+            <div class="timeline-card scroll-reveal-item">
+                <span class="timeline-date">Graduated</span>
+                <h3 class="hover-words">Senior High School Diploma</h3>
+                <h4 class="hover-words">Looc National High School</h4>
+                <p class="hover-words">Graduated with Honors (91% Average).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EXPERIENCE SECTION ========== -->
+    <section class="section experience-section scroll-reveal" id="experience">
+        <h2 class="heading hover-words">My <span>Experience</span> & Projects</h2>
+        <div class="timeline">
+            <div class="timeline-card scroll-reveal-item">
+                <span class="timeline-date">2026</span>
+                <h3 class="hover-words">Ethical Hacking & Security Simulations</h3>
+                <p class="hover-words">Practicing penetration testing methodologies, vulnerability assessments, and secure network setups.</p>
+            </div>
+            <div class="timeline-card scroll-reveal-item">
+                <span class="timeline-date">2026</span>
+                <h3 class="hover-words">Logic Circuit & Decoder Simulator</h3>
+                <p class="hover-words">Designed positional number converter tools, 7-segment display logic decoders, and circuit simulations in Falstad/CircuitVerse.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="section contact-section scroll-reveal" id="contact">
+        <h2 class="heading hover-words">Contact <span>Me</span></h2>
+        <div class="contact-container scroll-reveal-item">
+            <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/rolandjonnamangao@gmail.com" method="POST">
+                
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
+                <div class="input-box">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-box">
+                    <input type="number" name="phone" placeholder="Mobile Number">
+                    <input type="text" name="_subject" placeholder="Email Subject" required>
+                </div>
+                <textarea name="message" cols="30" rows="8" placeholder="Your Message" required></textarea>
+                <button type="submit" id="submitBtn" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
